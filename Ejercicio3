@@ -1,0 +1,31 @@
+package com.example.labo
+import org.junit.Test
+
+class Estudiante(val nombre : String, val carnet : Int, val asignatura: String)
+
+    val Ciclo01 = listOf(
+        Estudiante("Daniel Alejandro", 96122, "Dispositivos Moviles"),
+        Estudiante("Juan Jose", 56824, "Dispositivos Moviles"),
+        Estudiante("David Ventura", 89724, "Dispositivos Moviles"),
+        Estudiante("Kevin Samuel", 75224, "Analisis numerico"),
+        Estudiante("Abelio Jaime", 259223, "Analisis numerico "),
+        Estudiante("Adela Beatriz", 21522, "Analisis numerico "),
+        Estudiante("Kristen Li sagini", 535421, "Analisis numerico "),
+
+
+    )
+
+    fun SaberMateria() {
+        val materia = Ciclo01.filter { it.asignatura == "Dispositivos Moviles" }
+        materia.forEach { println(it.nombre) }
+    }
+
+
+
+class EstudianteTest {
+    @Test
+    fun probarEstudiante() {
+        SaberMateria()
+    }
+}
+

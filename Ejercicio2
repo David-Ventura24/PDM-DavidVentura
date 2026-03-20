@@ -1,0 +1,44 @@
+package com.example.labo
+import org.junit.Test
+
+class Calculadora(val Marca : String, val AnioVida : Int, val Precio : Double){
+
+    fun sumar(a: Int, b: Int){
+        var resultado = a + b;
+       println("La suma es:  $resultado")
+    }
+
+    fun restar(a: Int, b: Int){
+        var resultado = a - b;
+        println("La resta es:  $resultado")
+    }
+
+    fun multiplicar(a: Int, b: Int){
+        var resultado = a * b;
+        println("La multiplicacion es:  $resultado")
+    }
+
+    fun Dividir(a: Int, b: Int) {
+        if (b == 0) {
+            println("No dividiras entre 0")
+        } else {
+            var resultado = a / b;
+            println("la division es: $resultado")
+        }
+
+    }
+
+}
+
+class ProbarCalculadora {
+    @Test
+    fun probarCalculadora() {
+        val miCalcu = Calculadora("Casio", 5, 29.99)
+        miCalcu.sumar(2,4)
+        miCalcu.restar(8,2)
+        miCalcu.multiplicar(10,3)
+        miCalcu.Dividir(5,0)
+
+
+    }
+}

@@ -1,0 +1,57 @@
+package com.example.labo
+
+
+import org.junit.Test
+
+    class Computadora(var Procesador: String, var MemoriaRAM: Int, var Grafica: String, var SistemaOperativo: String, var Almacenamiento : String){
+
+    fun Encender(){
+        println("Encendiendo computadora")
+    }
+
+        fun Apagar(){
+        println("Apagando computadora")
+        }
+
+        fun actualizarProcesador(nuevoProcesador : String){
+            Procesador = nuevoProcesador
+        }
+
+        fun actualizarRAM(nuevaRAM : Int){
+            MemoriaRAM = nuevaRAM
+        }
+
+        fun actualizarGrafica(nuevaGrafica : String){
+            Grafica = nuevaGrafica
+        }
+
+        fun actualizarSO(nuevoSO : String){
+            SistemaOperativo = nuevoSO
+        }
+
+        fun actualizarAlmacenamiento(NuevoAlmacenamiento : String){
+            Almacenamiento = NuevoAlmacenamiento
+        }
+
+        val programasInstalados = listOf("Notion 2026", "Facebook 2024", "Chrome 2026", "Spotify 2025")
+
+
+        fun programasActuales() {
+            val filtrados = programasInstalados.filter { it.contains("2026") }
+            println(filtrados)
+        }
+
+
+
+
+    }
+
+class ProbarComputadora{
+    @Test
+    fun probarComputadora() {
+        val miCompu = Computadora("Intel", 8, "Nvidia", "Windows", "500GB")
+        miCompu.actualizarRAM(16)
+        println(miCompu.MemoriaRAM)
+        miCompu.programasActuales()
+    }
+}
